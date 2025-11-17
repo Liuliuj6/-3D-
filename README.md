@@ -139,6 +139,6 @@ if __name__ == '__main__':
         print(f"成功读取 {len(vertices)} 个顶点")  
         print(f"前三个顶点坐标：\n{vertices[:3]}")  
     except Exception as e:  
-        print(f"处理文件时出错: {str(e)}")```
+        print(f"处理文件时出错: {str(e)}")
 
 ```
