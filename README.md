@@ -3,6 +3,8 @@
 ## 一、Python读写3D模型代码示例（.3DS） 
 依赖库：py3d（需安装：pip install py3d）
 相关代码片段：
+
+```
 import py3d
 
 # 读取3DS文件
@@ -15,22 +17,33 @@ print(f"顶点数: {len(vertices)}")
 # 导出为OBJ格式
 model.export("character_converted.obj")
 
+```
+
 ## 二、Python读写3D模型代码示例（OBJ/glTF）
 ### 1.OBJ读取（Trimesh库）：
+
+```
 import trimesh
 
 mesh = trimesh.load("model.obj")
 print(f"表面积: {mesh.area:.2f}, 体积: {mesh.volume:.2f}")
 mesh.export("model_optimized.stl")  # 导出为STL
 
+```
+
 ### 2.glTF读取（PyGLTF2库）：
+
+```
 from pygltf2 import GLTF2
 
 gltf = GLTF2.load("scene.glb")
 print(f"包含 {len(gltf.meshes)} 个网格")
 
+```
 
 ## 三、Python读写3D模型代码示例（PLY）
+
+```
 import numpy as np  
   
 def parse_ply_header(file_path):  
@@ -127,3 +140,5 @@ if __name__ == '__main__':
         print(f"前三个顶点坐标：\n{vertices[:3]}")  
     except Exception as e:  
         print(f"处理文件时出错: {str(e)}")```
+
+```
